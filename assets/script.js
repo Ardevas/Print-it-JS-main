@@ -17,7 +17,7 @@ const slides = [
 	}
 ]
 
-
+// Déclaration des variables
 const bannerImage = document.querySelector(".banner-img");
 const tagLine = document.querySelector("#banner p");
 const arrowLeft = document.querySelector(".arrowLeft");
@@ -25,17 +25,17 @@ const arrowRight = document.querySelector(".arrowRight");
 const dotsList = document.querySelector(".dots");
 const buttonDot = document.querySelectorAll(".dot");
 
-// définition du point de départ
+// Définition du point de départ
 let currentSlideIndex = 0;
 
-// image actuelle
+// Image affichée
 function showSlide(index) {
     const slide = slides[index];
     bannerImage.src = `./assets/images/slideshow/${slide.image}`;
     tagLine.innerHTML = slide.tagLine;
 }
 
-// dot actif du bulletpoints
+// Dot actif du bulletpoints
 function dotSelection(index) {
     buttonDot.forEach(dot => {
         dot.classList.remove("dot_selected");
