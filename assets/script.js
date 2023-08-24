@@ -37,8 +37,8 @@ function showSlide(index) {
 
 // Dot actif du bulletpoints
 function dotSelection(index) {
-    buttonDot.forEach(dot => {
-        dot.classList.remove("dot_selected");
+    buttonDot.forEach(buttonDot => {
+        buttonDot.classList.remove("dot_selected");
     });
     buttonDot[index].classList.add("dot_selected");
 }
