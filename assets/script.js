@@ -17,13 +17,22 @@ const slides = [
 	}
 ]
 
+
+
+
 // Déclaration des variables
 const bannerImage = document.querySelector(".banner-img");
 const tagLine = document.querySelector("#banner p");
 const arrowLeft = document.querySelector(".arrowLeft");
 const arrowRight = document.querySelector(".arrowRight");
 const dotsList = document.querySelector(".dots");
-const buttonDot = document.querySelectorAll(".dot");
+
+// Création du nombre de dots du bulletpoint en fonction du contenu de slides
+for (let i = 0; i < slides.length; i++){
+	const dotElement = document.createElement("div");
+	dotElement.className = "dot";
+	dotsList.appendChild(dotElement);
+}
 
 // Définition du point de départ
 let currentSlideIndex = 0;
@@ -36,6 +45,8 @@ function showSlide(index) {
 }
 
 // Dot actif du bulletpoints
+const buttonDot = document.querySelectorAll(".dot");
+
 function dotSelection(index) {
     buttonDot.forEach(buttonDot => {
         buttonDot.classList.remove("dot_selected");
